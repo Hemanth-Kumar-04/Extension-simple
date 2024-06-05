@@ -1,0 +1,40 @@
+{
+  "name": "activate-umg",
+  "displayName": "UMG",
+  "description": "an extention that adds a command to activate Umg ",
+  "publisher":"Hemanth-Kumar",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.89.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./src/extension.js",
+  "contributes": {
+    "commands": [
+        {
+            "command": "activate-umg.activateUMG",
+            "title": "Activate UMG"
+        }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js",
+    "vscode:prepublish": "npm run lint",
+    "postinstall": "node ./node_modules/vscode/bin/install"
+}
+,
+  "devDependencies": {
+    "@types/vscode": "^1.89.0",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "eslint": "^8.57.0",
+    "typescript": "^5.4.5",
+    "@vscode/test-cli": "^0.0.9",
+    "@vscode/test-electron": "^2.4.0"
+  }
+}
